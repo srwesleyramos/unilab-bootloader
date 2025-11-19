@@ -1,11 +1,9 @@
-ASM=nasm
+all: build_img
+	qemu-system-i386 -drive format=raw,file=build/main.img
 
-SRC_DIR=src
-BUILD_DIR=build
+build_img: build_bin
+	cp build/main.bin build/main.img
+	truncate -s 1440k build/main.img
 
-$(BUILD_DIR)/main.img: $(BUILD_DIR)/main.bin
-	cp $(BUILD_DIR)/main.bin $(BUILD_DIR)/main.img
-	truncate -s 1440k $(BUILD_DIR)/main.img
-
-$(BUILD_DIR)/main.bin: $(SRC_DIR)/main.asm
-	$(ASM) $(SRC_DIR)/main.asm -f bin -o $(BUILD_DIR)/main.bin
+build_bin: src/main.asm
+	nasm -f bin -o build/main.bin src/main.asm
