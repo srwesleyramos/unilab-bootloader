@@ -1,17 +1,19 @@
-# 🖥️ Bootloader – Projeto da Disciplina de Microprocessadores e Linguagem de montagem
-
-Este projeto foi desenvolvido para a disciplina de Microprocessadores e Linguagem de Montagem, com o objetivo de criar um bootloader simples, funcional e compatível com o ambiente QEMU.
+# 🖥️ Bootloader
 
 ## 📌 Requisitos do Projeto
 
-[ ] Executar três exercícios desenvolvidos em sala de aula;
+### Stage 1
 
-[ ] O programa deve rodar utilizando QEMU;
+- Carregamento básico;
 
-[ ] Deve existir um comando para alterar a cor do texto;
+### Stage 2
 
-[ ] Deve existir um comando para alterar a cor do fundo;
+- Alterar cor de texto;
+- Alterar cor de fundo;
+- Iniciar modo protegido;
 
-[ ] Deve carregar e exibir uma imagem 64x64 no canto superior direito da tela;
+### Kernel
 
-[ ] Deve haver pelo menos um exercício que combine C com Assembly, seja chamando C a partir de ASM ou o inverso;
+- Carregar código em NASM;
+- Carregar código em C;
+- Carregar imagem;
