@@ -1,0 +1,8 @@
+# IntelliJ
+
+.idea/
+*.iml
+
+# Program
+
+build/
