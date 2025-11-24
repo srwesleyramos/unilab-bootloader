@@ -13,7 +13,7 @@ start:
     mov bx, 0x8000
 
     mov ah, 0x02
-    mov al, 1               ; amount
+    mov al, 5               ; amount
     mov ch, 0               ; cylinder
     mov cl, 2               ; sector
     mov dh, 0               ; head
